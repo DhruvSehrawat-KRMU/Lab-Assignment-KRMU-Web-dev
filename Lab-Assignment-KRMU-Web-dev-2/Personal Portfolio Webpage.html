@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Porfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr>
+            <h2>About Me</h2>
+            <img src="ptofile_picture.jpg" alt="profile img" width="300" height="200">
+            <p>Hello My Name is Dhruv Sehrawat. I am learning web development and this is my Personal Portfolio</p>
+            <hr>
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skills</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <article>
+                <h3>Project 1</h3>
+                <p>A simple HTML & CSS webpage</p>
+            </article>
+            <article>
+                <h3>Project 2</h3>
+                <p>Personal Portfolio Webpage</p>
+            </article>
+            <hr>
+        </section>
+    </main>
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="username">Name : </label>
+            <input type="text" id="username" placeholder="username" required maxlength="15" minlength="3">
+            <label for="email">Email :</label>
+            <input type="email" id="email" placeholder="like123@gmail.com" required>
+            <textarea rows="3" cols="30" placeholder="This is a textarea here we can write your comments"></textarea>
+            <label>
+                <input type="submit">
+            </label>
+        </form>
+    </footer>
+</body>
+
+</html>
