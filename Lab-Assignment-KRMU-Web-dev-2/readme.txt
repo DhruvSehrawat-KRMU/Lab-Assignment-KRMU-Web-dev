@@ -1,2 +1,1 @@
-
-Personal Portfolio Webopage with use of external CSS
+Personal Portfolio Webopage useing HTML and external CSS
