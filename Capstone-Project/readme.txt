@@ -1,1 +1,1 @@
-CAPSTONE-PROJECT
+Travel Agency Landing Page
