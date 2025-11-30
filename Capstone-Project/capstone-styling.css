@@ -3,10 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    padding-top: 80px; /* Account for fixed navbar */
 }
 .container {
     max-width: 1200px;
@@ -20,38 +24,49 @@ body {
     color: #2c3e50;
 }
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 1rem 0;
+    padding: 1rem 2rem 1rem 2rem;
     z-index: 1000;
 }
 .navbar nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.navbar .logo {
+    flex: 0;
+}
+.navbar .nav-links {
+    flex: 0;
 }
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: white;
+    text-decoration: none;
 }
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 .nav-links a:hover {
-    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
     color: #ffd700;
 }
 .hero-banner {
@@ -68,12 +83,13 @@ body {
 }
 .hero-content {
     text-align: center;
-    color: white;
+    color: rgb(238, 13, 13);
     animation: fadeIn 1.5s ease-in;
 }
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: #010C10;
 }
 .hero-content p {
     font-size: 1.5rem;
@@ -82,7 +98,7 @@ body {
 .cta-button {
     padding: 1rem 2.5rem;
     font-size: 1.2rem;
-    background: #ff6b6b;
+    background: #10c6d0;
     color: white;
     border: none;
     border-radius: 50px;
@@ -285,4 +301,289 @@ body {
     padding-top: 2rem;
     border-top: 1px solid #34495e;
     color: #bdc3c7;
+}
+
+/* 5. How It Works Section */
+.how-it-works {
+    padding: 5rem 0;
+    background: white;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.step-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.step-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 6. Traveler Testimonials */
+.testimonials {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.testimonial-author h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-author span {
+    color: #667eea;
+    font-size: 0.9rem;
+}
+
+/* 7. Blog Previews */
+.blog-preview {
+    padding: 5rem 0;
+    background: white;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.blog-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #1b3a98;
+}
+
+/* 8. Stats Counter */
+.stats-counter {
+    padding: 5rem 0;
+    background-color: rgb(45, 124, 188);
+    color: rgb(0, 0, 0);
+}
+
+.stats-counter .section-title {
+    color: rgb(121, 230, 250);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 200px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    animation: countUp 3s ease-out;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+}
+/* 9. Newsletter Signup */
+.newsletter {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form{
+    border-color: #667eea;
+}
+
+.newsletter-form button {
+    padding: 1rem 2rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+    background: #1b3a98;
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
 }
